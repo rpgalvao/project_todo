@@ -43,6 +43,7 @@ a.btn {
 .btn {
     padding: 20px 30px;
     border-radius: 15px;
+    margin-right: 10px;
     transition: all .3s ease-in-out;
 }
 .btn:hover {
