@@ -13,20 +13,58 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            Logo
+            <img src="/assets/images/logo.png" alt="">
         </div>
         <div class="content">
             <nav>
                 <a href="#" class="btn btn-primary">Criar Tarefa</a>
             </nav>
-            <div class="main">
+            <main class="main"">
                 <section class="graph">
-                    Gráfico
+                    <div class="graph_header">
+                        <h2>Progresso do Dia</h2>
+                        <div class="line_header"></div>
+                        <div class="graph_header-date">
+                            <img src="/assets/images/icon-prev.png" alt="">
+                                26 de Set
+                            <img src="/assets/images/icon-next.png" alt="">
+                        </div>
+                    </div>
+                    <div class="graph_header-subtitle">Tarefas: <b>3/6</b></div>
+                    <div class="graph_placeholder"></div>
+                    <div class="graph_text">
+                        <img src="/assets/images/icon-info.png" alt="">
+                        Restam 3 tarefas para serem realizadas
+                    </div>
                 </section>
                 <section class="list">
-                    Lista de tarefas
+                    <div class="list_header">
+                        <select class="list_header-select">
+                            <option value="1">Todas as tarefas</option>
+                        </select>
+                    </div>
+                    <div class="task_list">
+                        <div class="task">
+                            <div class="title">
+                                <input type="checkbox">
+                                <div class="task_title">Título da tarefa</div>
+                            </div>
+                            <div class="priority">
+                                <div class="sphere"></div>
+                                <div>Prioridade</div>
+                            </div>
+                            <div class="actions">
+                                <a href="">
+                                    <img src="/assets/images/icon-edit.png" alt="">    
+                                </a>
+                                <a href="">
+                                    <img src="/assets/images/icon-delete.png" alt="">    
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-            </div>
+            </main>
         </div>
     </div>
 </body>
