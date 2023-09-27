@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             //TaskSeeder::class
         ]);
 
-        User::factory(5)->create();
+        User::factory(7)->create();
         Category::factory(5)->create();
         Task::factory(40)->create();
         

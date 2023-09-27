@@ -1,6 +1,6 @@
 <x-layout title="ToDo | Início">
     <x-slot:btn>
-        <a href="#" class="btn btn-primary">Criar Tarefa</a>
+        <a href="{{route('task.create')}}" class="btn btn-primary">Criar Tarefa</a>
     </x-slot:btn>
     <section class="graph">
         <div class="graph_header">
@@ -26,37 +26,9 @@
             </select>
         </div>
         <div class="task_list">
-            @php
-                $tasks = [
-                    [
-                        'id' => 1,
-                        'done' => false,
-                        'title' => 'Minha primeira tarefa',
-                        'priority' => 'Prioridade 1',
-                        'edit_url' => 'https://www.globo.com',
-                        'delete_url' => 'https://www.google.com'
-                    ],
-                    [
-                        'id' => 2,
-                        'done' => true,
-                        'title' => 'Minha segunda tarefa',
-                        'priority' => 'Prioridade 2',
-                        'edit_url' => 'https://www.globo.com',
-                        'delete_url' => 'https://www.google.com'
-                    ],
-                    [
-                        'id' => 3,
-                        'done' => false,
-                        'title' => 'Minha terceira tarefa',
-                        'priority' => 'Prioridade 1',
-                        'edit_url' => 'https://www.globo.com',
-                        'delete_url' => 'https://www.google.com'
-                    ]
-                ];
-            @endphp
-            <x-task :task=$tasks[0]/>
-            <x-task :task=$tasks[1]/>
-            <x-task :task=$tasks[2]/>
+            @foreach ($tasks as $task)
+                <x-task :task=$task/>
+            @endforeach
         </div>
     </section>
 </x-layout>

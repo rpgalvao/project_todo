@@ -23,8 +23,9 @@ class TaskFactory extends Factory
             $user = User::all()->random();
         }
         return [
+            "is_done" => $this->faker->boolean(),
             "title" => $this->faker->text(20),
-            "description" => $this->faker->text(90),
+            "description" => $this->faker->text(250),
             "due_date" => $this->faker->dateTime(),
             "user_id" => $user,
             "category_id" => $user->categories->random()

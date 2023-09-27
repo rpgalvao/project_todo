@@ -45,6 +45,8 @@ a.btn {
     border-radius: 15px;
     margin-right: 10px;
     transition: all .3s ease-in-out;
+    border: 0;
+    cursor: pointer;
 }
 .btn:hover {
     transform: scale(1.05);
@@ -53,8 +55,13 @@ a.btn {
     background-color: var(--color-primary);
     color: #FFFFFF;
 }
+.btn-secondary {
+    background-color: #DDDDDD;
+    color: #555555;
+}
 .main {
     display: flex;
+    overflow-x: hidden;
 }
 
 section.graph {
@@ -132,6 +139,7 @@ h2 {
     margin-bottom: 10px;
     border-bottom: 1px solid var(--background-light);
     transition: all .3s ease-in-out;
+    overflow: hidden;
 }
 .task:hover {
     transform: scale(1.05);
@@ -170,4 +178,38 @@ h2 {
 .task_title {
     padding-left: 10px;
     font-weight: bold;
+}
+section#task_section {
+    margin: auto;
+    padding: 20px;
+}
+section#task_section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.inputArea {
+    display: block;
+    margin: 10px 0 20px 0;
+}
+.inputArea>label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.inputArea>input, .inputArea>select {
+    height: 40px;
+    width: 400px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.inputArea>textarea {
+    height: 150px;
+    width: 400px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    resize: vertical;
+    border: 1px solid #DDDDDD;
+    background-color: rgba(255, 255, 255, 0.5);
 }

@@ -1,7 +1,7 @@
 <div class="task">
     <div class="title">
         <input type="checkbox"
-            @if (isset($task) && $task['done'] == true)
+            @if (isset($task) && $task['is_done'] == true)
                 checked
             @endif
         >
@@ -9,14 +9,14 @@
     </div>
     <div class="priority">
         <div class="sphere"></div>
-        <div>{{$task['priority'] ?? ''}}</div>
+        <div>{{$task['category']->title ?? ''}}</div>
     </div>
     <div class="actions">
-        <a href="http://meusite.com.br/task/edit/{{$task['id']}}">
+        <a href="{{route('task.edit', ['id' => $task['id']])}}">
             <img src="/assets/images/icon-edit.png" alt="">    
         </a>
-        <a href="http://meusite.com.br/task/delete/{{$task['id']}}">
-            <img src="/assets/images/icon-delete.png" alt="">    
+        <a href="{{route('task.delete', ['id' => $task['id']])}}" onclick="return confirm('Tem certeza que deseja deletar essa tarefa?')">
+            <img src="/assets/images/icon-delete.png" alt="">
         </a>
     </div>
 </div>
