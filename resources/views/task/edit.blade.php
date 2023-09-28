@@ -22,6 +22,7 @@
                 @endforeach
             </x-form.select>
             <x-form.textarea name="description" label="Descrição da tarefa" value="{{$task->description}}" placeholder="Digite a descrição da tarefa" required="y" />
+            <x-form.checkbox name="is_done" label="Tarefa concluída?" checked="{{$task->is_done}}" />
             <x-form.form_button resetTxt="Limpar" submitTxt="Atualizar Tarefa" />
         </form>
     </section>

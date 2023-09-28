@@ -17,6 +17,11 @@
         </div>
         <div class="content">
             <nav>
+                @if (Auth::user())
+                    <div class="userName">    
+                        <p>Seja bem vindo {{Auth::user()->name}}</p>
+                    </div>
+                @endif
                 {{$btn ?? null}}
             </nav>
             <main class="main"">

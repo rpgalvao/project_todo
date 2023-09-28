@@ -53,6 +53,7 @@ class TaskController extends Controller
             return redirect(route('home'));
         }
         $newTask = $request->only(['title', 'due_date', 'category_id', 'description']);
+        $newTask['is_done'] = $request->is_done ? true : false;
         
         $task = Task::find($id);
         $task->update($newTask);
